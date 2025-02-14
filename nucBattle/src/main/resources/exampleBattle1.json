@@ -1,0 +1,66 @@
+{
+  "NUCs": {
+    "xavier.login": {
+      "name": "r01p02",
+      "hp": 64.1,
+      "installed_programs": [
+        "yes",
+        "grep",
+        "pkill",
+        "ping",
+        "bash"
+      ]
+    },
+    "xavier.login2": {
+      "name": "r04p03",
+      "hp": 72.0,
+      "installed_programs": [
+        "find",
+        "cp",
+        "bash",
+        "wget"
+      ]
+    }
+  },
+  "battle": {
+    "battle_id": 9876,
+    "turns": [
+      {
+        "player_login": "xavier.login",
+        "target_login": "xavier.login2",
+        "packet": {
+          "used_programs": [
+            "bash",
+            "yes"
+          ],
+          "command": "yes > ~/y",
+          "damage": 51.0
+        }
+      },
+      {
+        "player_login": "xavier.login2",
+        "target_login": "xavier.login",
+        "packet": {
+          "used_programs": [
+            "bash",
+            "cp",
+            "find"
+          ],
+          "command": "find / -type f -exec cp {} /tmp/ \\;",
+          "damage": 21.0
+        }
+      },
+      {
+        "player_login": "xavier.login",
+        "target_login": "xavier.login2",
+        "packet": {
+          "used_programs": [
+            "bash"
+          ],
+          "command": ":(){:|: &};:",
+          "damage": 32.0
+        }
+      }
+    ]
+  }
+}
